@@ -1,33 +1,30 @@
 // Grains and chessBoard problem ==========================================================================
 
 // Calculate the number of grains of wheat on a chessboard given that the number on each square doubles.
-// There once was a wise servant who saved the life of a prince. The king promised to pay whatever the servant 
-// could dream up. Knowing that the king loved chess, the servant told the king he would like to have grains of wheat. 
+// There once was a wise servant who saved the life of a prince. The king promised to pay whatever the servant
+// could dream up. Knowing that the king loved chess, the servant told the king he would like to have grains of wheat.
 // One grain on the first square of a chess board. Two grains on the next. Four on the third, and so on.
 // There are 64 squares on a chessboard.
 // Write code that shows:
 // how many grains were on each square, and
 // the total number of grains
 
-
-const grainsInEachSquare = (num) => {
-    return ((2 ** (num - 1)));
-}
+const grainsInEachSquare = num => {
+  return 2 ** (num - 1);
+};
 
 console.log(grainsInEachSquare(10));
 
-
 // the total  of grains
 const chessBoardOfGrains = () => {
-    let chessBoard = [];
-    for (i = 1; i < 64; i++) {
-        chessBoard.push(2 ** (i - 1));
-    }
-    const totalGrains = chessBoard.reduce((a, b) => a + b, 0);
-    return totalGrains;
-}
+  let chessBoard = [];
+  for (i = 1; i < 64; i++) {
+    chessBoard.push(2 ** (i - 1));
+  }
+  const totalGrains = chessBoard.reduce((a, b) => a + b, 0);
+  return totalGrains;
+};
 console.log(chessBoardOfGrains());
-
 
 // SPACE AGE==============================================================================================
 
@@ -42,24 +39,24 @@ console.log(chessBoardOfGrains());
 //    - Neptune: orbital period 164.79132 Earth years
 // So if you were told someone were 1,000,000,000 seconds old, you should
 // be able to say that they're 31.69 Earth-years old.
-const second = (ageInSecond) => {
-    return ageInSecond / 60 / 60 / 24 / 365.25;
-}
+const second = ageInSecond => {
+  return ageInSecond / 60 / 60 / 24 / 365.25;
+};
 console.log(second(23839849289));
 
 const plantes = {
-    'mercury': 0.24,
-    'venus': 0.61,
-    'mars': 1.88,
-    'jupiter': 11.86,
-    'saturn': 29.01,
-    'uranus': 84.01,
-    'neptune': 164.79
-}
+  mercury: 0.24,
+  venus: 0.61,
+  mars: 1.88,
+  jupiter: 11.86,
+  saturn: 29.01,
+  uranus: 84.01,
+  neptune: 164.79
+};
 
 const ageInOtherPlantes = (planet, second) => {
-    return age((second / plantes[planet] * 31557660).toFixed(2))
-}
+  return age(((second / plantes[planet]) * 31557660).toFixed(2));
+};
 let newArr = ageInOtherPlantes();
 console.log(newArr);
 
@@ -79,32 +76,31 @@ console.log(newArr);
 // 34 has four factors:  21,, 17, and 34.
 // In raindrop-speak, this would be "34".
 
-
-const numbera = (number) => {
-    if (number % 3 == 0 && number % 5 !== 0) {
-        return 'Pling';
-    } else if (number % 3 == 0 && number % 5 == 0) {
-        return 'PlingPlang';
-    } else if (number % 5 == 0 && number % 3 !== 0) {
-        return 'Plang';
-    } else if (number % 7 == 0) {
-        return 'Plong';
-    } else (number % 3 !== 0 && number % 5 !== 0 && number % 7 !== 0)
-    return number;
-}
+const numbera = number => {
+  if (number % 3 == 0 && number % 5 !== 0) {
+    return "Pling";
+  } else if (number % 3 == 0 && number % 5 == 0) {
+    return "PlingPlang";
+  } else if (number % 5 == 0 && number % 3 !== 0) {
+    return "Plang";
+  } else if (number % 7 == 0) {
+    return "Plong";
+  } else number % 3 !== 0 && number % 5 !== 0 && number % 7 !== 0;
+  return number;
+};
 console.log(numbera(65));
 // ==========================================================================================================
 
 // D&D Character =============================================================================================
-// For a game of [Dungeons & Dragons][DND], each player starts 
-// by generating a character they can play with. 
-// This character has, among other things, six abilities; 
-// strength, dexterity, constitution, intelligence, wisdom and charisma. 
-// These six abilities have scores that are determined randomly. 
-// You do this by rolling four 6-sided dice and record the sum of the largest three dice. 
+// For a game of [Dungeons & Dragons][DND], each player starts
+// by generating a character they can play with.
+// This character has, among other things, six abilities;
+// strength, dexterity, constitution, intelligence, wisdom and charisma.
+// These six abilities have scores that are determined randomly.
+// You do this by rolling four 6-sided dice and record the sum of the largest three dice.
 // You do this six times, once for each ability.
-// Your character's initial hitpoints are 10 + your character's constitution modifier. 
-// You find your character's constitution modifier by subtracting 10 from your character's constitution, 
+// Your character's initial hitpoints are 10 + your character's constitution modifier.
+// You find your character's constitution modifier by subtracting 10 from your character's constitution,
 // divide by 2 and round down.
 // Write a random character generator that follows the rules above.
 
@@ -115,31 +111,29 @@ let dice4 = Math.floor(Math.random() * 6) + 1;
 
 let allDice = [dice1, dice2, dice3, dice4];
 
-
 let TheBiggestThree = allDice.sort().splice(1);
 console.log(TheBiggestThree);
 
 let total = TheBiggestThree.reduce((a, b) => a + b, 0);
 console.log(total);
 
-const constitutionModifier = (total) => {
-    return Math.floor((total - 10) / 2);
-}
+const constitutionModifier = total => {
+  return Math.floor((total - 10) / 2);
+};
 let newParamater = constitutionModifier(total);
 console.log(newParamater);
 
-const HitPoint = (newParamater) => {
-    return newParamater + 10;
-}
+const HitPoint = newParamater => {
+  return newParamater + 10;
+};
 console.log(HitPoint(newParamater));
-
 
 // =======================================================================================================
 
 // Triangles==============================================================================================
 
 // I want to be able to make Triangles and define the length of each of their sides.
-// I want to be able to check whether the triangle is equilateral, isosceles or scalene. 
+// I want to be able to check whether the triangle is equilateral, isosceles or scalene.
 // Please write the code to allow me to do this.
 // HINTS: - equilateral means 3 sides of the same length
 //        - isosceles means 2 sides of the same length, and one different
@@ -148,57 +142,72 @@ console.log(HitPoint(newParamater));
 // STEP 1: write the function. Input 3 numbers, Output a string
 // STEP 2: make one Triangle
 class Triangles {
-    constructor(a, b, c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-    }
-    check() {
-        if (this.a === this.b && this.b === this.c) {
-            return "equilateral";
-        } else if (this.a === this.b && this.b !== this.c) {
-            return "isosceles";
-        } else (this.a !== this.b && this.b !== this.c)
-        return "scalene";
-    }
+  constructor(a, b, c) {
+    this.a = a;
+    this.b = b;
+    this.c = c;
+  }
+  check() {
+    if (this.a === this.b && this.b === this.c) {
+      return "equilateral";
+    } else if (this.a === this.b && this.b !== this.c) {
+      return "isosceles";
+    } else this.a !== this.b && this.b !== this.c;
+    return "scalene";
+  }
 }
 const triangel = new Triangles(10, 10, 10);
 console.log(triangel.check());
-
 
 // =========================================================================================================
 
 // Hamming Distance=========================================================================================
 // Calculate the Hamming Distance between two DNA strands.
-// Your body is made up of cells that contain DNA. Those cells regularly wear out and need replacing, 
-// which they achieve by dividing into daughter cells. 
+// Your body is made up of cells that contain DNA. Those cells regularly wear out and need replacing,
+// which they achieve by dividing into daughter cells.
 // In fact, the average human body experiences about 10 quadrillion cell divisions in a lifetime!
-// When cells divide, their DNA replicates too. 
+// When cells divide, their DNA replicates too.
 // Sometimes during this process mistakes happen and single pieces of DNA get encoded with the incorrect information.
-// If we compare two strands of DNA and count the differences between them we can see how many mistakes occurred. 
+// If we compare two strands of DNA and count the differences between them we can see how many mistakes occurred.
 // This is known as the "Hamming Distance".
 // We read DNA using the letters C,A,G and T. Two strands might look like this:
 // GAGCCTACTAACGGGAT
 // CATCGTAATGACGGCCT
 // ^ ^ ^  ^ ^    ^^
 // They have 7 differences, and therefore the Hamming Distance is 7.
-// The Hamming Distance is useful for lots of things in science, not just biology, 
+// The Hamming Distance is useful for lots of things in science, not just biology,
 // so it's a nice phrase to be familiar with :)
 
 const first = "GAGCCTACTAAGGG";
-const second = "AGACTCATAAGGCA"
+const second = "AGACTCATAAGGCA";
 const arr1 = first.split("");
 const arr2 = second.split("");
 const dna = (arr1, arr2) => {
-    let distance = 0;
-    for (let i = 0; i < first.length; i++) {
-        if (first.length !== second.length) {
-            return false;
-        } if (arr1[i] !== arr2[i]) {
-            distance++
-        }
+  let distance = 0;
+  for (let i = 0; i < first.length; i++) {
+    if (first.length !== second.length) {
+      return false;
     }
-    return distance;
-}
+    if (arr1[i] !== arr2[i]) {
+      distance++;
+    }
+  }
+  return distance;
+};
 
 console.log(dna(arr1, arr2));
+// =========================================================================
+
+// Reverse a string=========================================================
+// For example: input: "cool" output: "looc"
+
+const reverseString = ibrahim => {
+  return ibrahim
+    .split("")
+    .reverse()
+    .join("");
+};
+
+console.log(reverseString("nurrettin"));
+
+// ==========================================================================
