@@ -1,3 +1,5 @@
+// Grains and chessBoard problem ==========================================================================
+
 // Calculate the number of grains of wheat on a chessboard given that the number on each square doubles.
 // There once was a wise servant who saved the life of a prince. The king promised to pay whatever the servant 
 // could dream up. Knowing that the king loved chess, the servant told the king he would like to have grains of wheat. 
@@ -28,8 +30,8 @@ console.log(chessBoardOfGrains());
 
 
 // SPACE AGE==============================================================================================
-// Given an age in seconds, calculate how old someone would be on:
 
+// Given an age in seconds, calculate how old someone would be on:
 //    - Mercury: orbital period 0.2408467 Earth years
 //    - Venus: orbital period 0.61519726 Earth years
 //    - Earth: orbital period 1.0 Earth years, 365.25 Earth days, or 31,557,600 seconds
@@ -38,7 +40,6 @@ console.log(chessBoardOfGrains());
 //    - Saturn: orbital period 29.447498 Earth years
 //    - Uranus: orbital period 84.016846 Earth years
 //    - Neptune: orbital period 164.79132 Earth years
-
 // So if you were told someone were 1,000,000,000 seconds old, you should
 // be able to say that they're 31.69 Earth-years old.
 const second = (ageInSecond) => {
@@ -66,7 +67,6 @@ console.log(newArr);
 
 // RAINBOW DROPS================================================================================================
 // Convert a number to a string, the contents of which depend on the number's factors.
-
 // If the number has 3 as a factor, output 'Pling'.
 // If the number has 5 as a factor, output 'Plang'.
 // If the number has 7 as a factor, output 'Plong'.
@@ -103,11 +103,9 @@ console.log(numbera(65));
 // These six abilities have scores that are determined randomly. 
 // You do this by rolling four 6-sided dice and record the sum of the largest three dice. 
 // You do this six times, once for each ability.
-
 // Your character's initial hitpoints are 10 + your character's constitution modifier. 
 // You find your character's constitution modifier by subtracting 10 from your character's constitution, 
 // divide by 2 and round down.
-
 // Write a random character generator that follows the rules above.
 
 let dice1 = Math.floor(Math.random() * 6) + 1;
@@ -137,9 +135,6 @@ console.log(HitPoint(newParamater));
 
 
 // =======================================================================================================
-
-
-
 
 // Triangles==============================================================================================
 
@@ -171,26 +166,22 @@ const triangel = new Triangles(10, 10, 10);
 console.log(triangel.check());
 
 
-// ================================================================================================================
+// =========================================================================================================
 
+// Hamming Distance=========================================================================================
 // Calculate the Hamming Distance between two DNA strands.
-
 // Your body is made up of cells that contain DNA. Those cells regularly wear out and need replacing, 
 // which they achieve by dividing into daughter cells. 
 // In fact, the average human body experiences about 10 quadrillion cell divisions in a lifetime!
-
 // When cells divide, their DNA replicates too. 
 // Sometimes during this process mistakes happen and single pieces of DNA get encoded with the incorrect information.
 // If we compare two strands of DNA and count the differences between them we can see how many mistakes occurred. 
 // This is known as the "Hamming Distance".
-
 // We read DNA using the letters C,A,G and T. Two strands might look like this:
-
 // GAGCCTACTAACGGGAT
 // CATCGTAATGACGGCCT
 // ^ ^ ^  ^ ^    ^^
 // They have 7 differences, and therefore the Hamming Distance is 7.
-
 // The Hamming Distance is useful for lots of things in science, not just biology, 
 // so it's a nice phrase to be familiar with :)
 
