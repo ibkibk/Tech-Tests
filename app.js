@@ -21,7 +21,7 @@ const chessBoardOfGrains = () => {
     for (i = 1; i < 64; i++) {
         chessBoard.push(2 ** (i - 1));
     }
-    const totalGrains = chessBoard.reduce((a, b) =>  a + b , 0);
+    const totalGrains = chessBoard.reduce((a, b) => a + b, 0);
     return totalGrains;
 }
 console.log(chessBoardOfGrains());
@@ -47,18 +47,20 @@ const second = (ageInSecond) => {
 console.log(second(23839849289));
 
 const plantes = {
-    mercury: 0.24,
-    venus: 0.61,
-    mars: 1.88,
-    jupiter: 11.86,
-    saturn: 29.01,
-    uranus: 84.01,
-    neptune: 164.79
+    'mercury': 0.24,
+    'venus': 0.61,
+    'mars': 1.88,
+    'jupiter': 11.86,
+    'saturn': 29.01,
+    'uranus': 84.01,
+    'neptune': 164.79
 }
 
-const ageInOtherPlantes = (planets) => {
-    return
+const ageInOtherPlantes = (planet, second) => {
+    return age((second / plantes[planet] * 31557660).toFixed(2))
 }
+let newArr = ageInOtherPlantes();
+console.log(newArr);
 
 // ==========================================================================================================
 
@@ -88,7 +90,7 @@ const numbera = (number) => {
     } else if (number % 7 == 0) {
         return 'Plong';
     } else (number % 3 !== 0 && number % 5 !== 0 && number % 7 !== 0)
-        return number;
+    return number;
 }
 console.log(numbera(65));
 // ==========================================================================================================
