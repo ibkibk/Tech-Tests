@@ -8,36 +8,23 @@
 // the total number of grains
 
 
-
-
-class Chessboard {
-    constructor(squares) {
-        this.squares = squares;
-        this.grainsObj = this.buildGrainsObject();
-    }
-
-    selectedSquare(squareNumber) {
-        return `On square ${squareNumber} you have ${this.grainsObj[squareNumber]} grains.`;
-    }
-
-    totalGrains() {
-        // Object.values(this.grainsObj).reduce((t, n) => t + n);
-        Object.keys(this.grainsObj).map(key => this.grainsObj[key]).reduce((previous, current) => previous + current);
-    }
-
-    buildGrainsObject() {
-        let grainsObj = {};
-        for (let i = 1; i <= this.squares; i++) {
-            grainsObj[i] = Math.pow(2, i - 1);
-        }
-        return grainsObj;
-    }
+const grainsInEachSquare = (num) => {
+    return ((2 ** (num - 1)));
 }
 
-const squares = new Chessboard(64);
-// console.log(squares.selectedSquare(5));
-// console.log(squares.buildGrainsObject());
-console.log(squares.totalGrains());
+console.log(grainsInEachSquare(10));
+
+
+// the total  of grains
+const chessBoardOfGrains = () => {
+    let chessBoard = [];
+    for (i = 1; i < 64; i++) {
+        chessBoard.push(2 ** (i - 1));
+    }
+    const totalGrains = chessBoard.reduce((a, b) =>  a + b , 0);
+    return totalGrains;
+}
+console.log(chessBoardOfGrains());
 
 
 // SPACE AGE==============================================================================================
@@ -54,7 +41,6 @@ console.log(squares.totalGrains());
 
 // So if you were told someone were 1,000,000,000 seconds old, you should
 // be able to say that they're 31.69 Earth-years old.
-
 const second = (ageInSecond) => {
     return ageInSecond / 60 / 60 / 24 / 365.25;
 }
@@ -130,7 +116,7 @@ let dice4 = Math.floor(Math.random() * 6) + 1;
 let allDice = [dice1, dice2, dice3, dice4];
 
 
-let TheBiggestThree = allDice.filter(num => num != Math.min(...allDice));
+let TheBiggestThree = allDice.sort().splice(1);
 console.log(TheBiggestThree);
 
 let total = TheBiggestThree.reduce((a, b) => a + b, 0);
