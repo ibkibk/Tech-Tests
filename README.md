@@ -1,4 +1,7 @@
 # Tech-Test
 
+HAMMING DISTANCE 
+SPACE-AGE
+RAIN-DROPS
 
 
