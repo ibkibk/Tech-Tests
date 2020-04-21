@@ -286,3 +286,23 @@ const romanNumberConverter = (num) => {
 romanNumberConverter();
 
 console.log(romanNumberConverter(2987));
+
+// ======================================================================================================================
+
+// HIGH SCORES
+// Manage a game player's High Score list.
+
+// Your task is to build a high-score component of the classic Frogger game,
+// one of the highest selling and addictive games of all time, and a classic
+// of the arcade era. Your task is to write methods that return the
+// highest score from the list,
+// the last added score and the three highest scores.
+
+const scores = [3, 5, 1, 8, 78, 54, 23, 56, 7, 9, 23];
+
+const lastOne = scores.pop();
+console.log(lastOne);
+const topOne = scores.sort((a, b) => b - a).splice(0, 1);
+console.log(topOne);
+const topThree = scores.sort((a, b) => b - a).splice(0, 3);
+console.log(topThree);
