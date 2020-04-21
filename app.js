@@ -306,3 +306,17 @@ const topOne = scores.sort((a, b) => b - a).splice(0, 1);
 console.log(topOne);
 const topThree = scores.sort((a, b) => b - a).splice(0, 3);
 console.log(topThree);
+
+// ====================================================================================================
+
+// capitalize specific character
+const capitalize = (str) => {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.substring(1))
+    .join(" ");
+};
+console.log(capitalize("ibrahim kurhan"));
+
+// ========================================================================================================
