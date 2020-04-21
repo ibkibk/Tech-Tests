@@ -208,3 +208,17 @@ const HitPoint = (newParamater) => {
 console.log(HitPoint(newParamater));
 
 // =======================================================================================================
+
+// anagram-
+// Tech-test
+
+// How do you check if two strings are anagrams of each other?
+
+const CheckIsAnagram = (word1, word2) => {
+  const newWord1 = word1.split("").sort().join("").toLowerCase();
+  const newWord2 = word2.split("").sort().join("").toLowerCase();
+  return newWord1 === newWord2
+    ? `${newWord1} and ${newWord2} are anagrams!`
+    : `${newWord1} and ${newWord2} are not anagrams.`;
+};
+console.log(CheckIsAnagram("bobo", "obob"));
