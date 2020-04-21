@@ -1,4 +1,4 @@
-# Grains and chessBoard problem
-Tech-Test
+# Tech-Test
+
 
 
