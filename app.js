@@ -320,3 +320,23 @@ const capitalize = (str) => {
 console.log(capitalize("ibrahim kurhan"));
 
 // ========================================================================================================
+
+// LONGEST WORD IN AN ARRAY
+
+const longestWord = (ben) => {
+  const wordArr = ben.toLowerCase().match(/[a-z0-9]+/g);
+
+  const sortedWords = wordArr.sort((a, b) => b.length - a.length);
+  const longestArr = sortedWords.filter(
+    (word) => word.length === sortedWords[0].length
+  );
+  if (longestArr.length === 1) {
+    return longestArr[0];
+  } else {
+    return longestArr;
+  }
+};
+
+console.log(longestWord("ibrahiim kurhannnnn jdhdhddbdb"));
+
+// ===========================================================================================================
