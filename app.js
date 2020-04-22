@@ -340,3 +340,27 @@ const longestWord = (ben) => {
 console.log(longestWord("ibrahiim kurhannnnn jdhdhddbdb"));
 
 // ===========================================================================================================
+
+// capitalize specific character
+
+// first method
+
+const cap = (str) => {
+  const newS = str.toLowerCase().split(" ");
+
+  for (let i = 0; i < newS.length; i++) {
+    newS[i] = newS[i].substring(0, 1).toUpperCase() + newS[i].substring(1);
+  }
+  return newS.join(" ");
+};
+console.log(cap("ibrahim kurhan"));
+// secondMethod
+
+const capitalize = (str) => {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.substring(1))
+    .join(" ");
+};
+console.log(capitalize("ibrahim kurhan"));
