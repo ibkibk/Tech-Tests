@@ -364,3 +364,25 @@ const capitalize = (str) => {
     .join(" ");
 };
 console.log(capitalize("ibrahim kurhan"));
+
+// ======================================================================================================================
+
+// 6.How do you find all pairs of an integer array whose sum is equal to a given number?
+
+const intArray = [2, 11, 8, 3, 9, 4, 5, 10, 29, 30, 52];
+const givenNumber = 13;
+let result = [];
+
+for (let i = 0; i < intArray.length; i++) {
+  for (let j = 0; j < intArray.length; j++) {
+    if (j != i && intArray[i] + intArray[j] == givenNumber) {
+      result.push(intArray[i], intArray[j]);
+    }
+  }
+}
+const lastResult = result.filter(
+  (item, index) => result.indexOf(item) == index
+);
+console.log(lastResult);
+
+================================================================================================================================
