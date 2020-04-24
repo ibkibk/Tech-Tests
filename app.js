@@ -374,3 +374,10 @@ const lastResult = result.filter(
 console.log(lastResult);
 
 // ================================================================================================================================
+// 4.How do you remove duplicates from an array in place?
+const numbers = ["a", "c", "d", "s", "s", "w", "w", "a"];
+const newNumbers = numbers.filter(
+  (item, index) => numbers.indexOf(item) == index
+);
+
+console.log(newNumbers);
