@@ -381,3 +381,25 @@ const newNumbers = numbers.filter(
 );
 
 console.log(newNumbers);
+
+// ===========================================================================================================================
+
+AGE CONVERTER 
+
+// write a function to convert your age from years to days
+
+
+const ageInDays = () => {
+  let birthYear = prompt("when were you born...");
+  let convertTheAge = (2020 - birthYear) * 365;
+  let h1 = document.createElement("h1");
+  let answer = document.createTextNode(convertTheAge);
+  h1.setAttribute("id", "ageInDays");
+  h1.appendChild(answer);
+  document.getElementById("A").appendChild(h1);
+};
+ageInDays();
+
+const reset = () => {
+  document.getElementById("ageInDays").remove();
+};
