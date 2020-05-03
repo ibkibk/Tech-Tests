@@ -384,10 +384,9 @@ console.log(newNumbers);
 
 // ===========================================================================================================================
 
-AGE CONVERTER 
+// AGE CONVERTER
 
 // write a function to convert your age from years to days
-
 
 const ageInDays = () => {
   let birthYear = prompt("when were you born...");
@@ -403,3 +402,12 @@ ageInDays();
 const reset = () => {
   document.getElementById("ageInDays").remove();
 };
+
+// ========================================================================================================================
+// 15.How do you find all permutations of a string?
+const factorial = (n) => {
+  return n != 1 ? n * factorial(n - 1) : 1;
+};
+console.log(factorial(5));
+
+// ==========================================================================================================================
