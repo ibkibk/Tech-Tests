@@ -411,3 +411,28 @@ const factorial = (n) => {
 console.log(factorial(5));
 
 // ==========================================================================================================================
+
+// 10.How do you print the first non-repeated character from a string?
+
+const words = "ibrahibm";
+const last = words.split("");
+const newWords = words
+  .split("")
+  .filter((item, index) => words.indexOf(item) !== index);
+const final = [];
+for (let i = 0; i < last.length; i++) {
+  let match = false;
+  for (let j = 0; j < newWords.length; j++) {
+    if (last[i] == newWords[j]) {
+      match = true;
+      break;
+    }
+  }
+  if (!match) {
+    final.push(last[i]);
+  }
+}
+
+console.log(final[0]);
+
+// ==================================================================================================================================
