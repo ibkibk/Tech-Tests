@@ -436,3 +436,16 @@ for (let i = 0; i < last.length; i++) {
 console.log(final[0]);
 
 // ==================================================================================================================================
+
+//  8-How do you print duplicate characters from a string?
+
+const dublicatePrinter = () => {
+  const sentence = "print the diblicate words from the sentence";
+  const senArr = sentence.split(" ");
+  const filteredSenArr = senArr.filter(
+    (item, index) => senArr.indexOf(item) !== index
+  );
+  return filteredSenArr;
+};
+console.log(dublicatePrinter());
+// =======================================================================================================================
