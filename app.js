@@ -449,3 +449,15 @@ const dublicatePrinter = () => {
 };
 console.log(dublicatePrinter());
 // =======================================================================================================================
+
+// 13.How do you check if two strings are a rotation of each other?
+
+const checkRoation = (str1, str2) => {
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  let doubleTheString = str1.concat(str1);
+  return doubleTheString.includes(str2) !== -1;
+};
+
+console.log(checkRoation("ibrahim", "birahim"));
