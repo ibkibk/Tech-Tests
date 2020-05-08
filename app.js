@@ -463,3 +463,17 @@ const checkRoation = (str1, str2) => {
 console.log(checkRoation("ibrahim", "birahim"));
 
 // ==========================================================================================================================
+
+// 16.How do you check if a string contains only digits?
+
+const first = "buy";
+const checker = () => {
+  if ((first.length > 0) & (first.length < 2)) {
+    return true;
+  } else return false;
+};
+checker();
+
+console.log(checker());
+
+// =============================================================================================================================
