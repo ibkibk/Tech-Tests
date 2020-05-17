@@ -477,3 +477,18 @@ checker();
 console.log(checker());
 
 // =============================================================================================================================
+
+// 14.How do you swap two numbers without using a third variable?
+
+let a = 1;
+let b = 2;
+
+a = a + b;
+// 1. a = 1+2 new value of a changed to 3
+b = a - b;
+// 2. b = 3-2 new value of b changed to 1
+a = a - b;
+// 3. a= 3-1 new value of a changed to 2
+
+let a = 2;
+let b = 1;
