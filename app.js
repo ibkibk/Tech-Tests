@@ -492,3 +492,20 @@ a = a - b;
 
 let a = 2;
 let b = 1;
+// ==========================================================================================
+
+// 1.How do you find the missing numbers in a given integer array?
+const numbers = [1, 2, 3, 4, 5, 6, 8, 9, 10];
+let number = [];
+
+for (let i = 1; i < numbers.length; i++) {
+  if (numbers[i] - numbers[i - 1] != 1) {
+    let x = numbers[i] - numbers[i - 1];
+    let j = 1;
+    while (j < x) {
+      number.push(numbers[i - 1] + j);
+      j++;
+    }
+  }
+}
+console.log(number);
