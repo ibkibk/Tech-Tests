@@ -509,3 +509,11 @@ for (let i = 1; i < numbers.length; i++) {
   }
 }
 console.log(number);
+// ===============================================================================================
+// 12.How can a given string be reversed using recursion?
+
+const reverseString = (str) => {
+  if (str === "") return "";
+  else return reverseString(str.substr(1)) + str.charAt(0);
+};
+console.log(reverseString("hello"));
