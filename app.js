@@ -517,3 +517,15 @@ const reverseString = (str) => {
   else return reverseString(str.substr(1)) + str.charAt(0);
 };
 console.log(reverseString("hello"));
+// ======================================================================================================
+// 16.How do you check if a string contains only digits?
+
+const first = "buy";
+const checker = () => {
+  if ((first.length > 0) & (first.length < 2)) {
+    return true;
+  } else return false;
+};
+checker();
+
+console.log(checker());
