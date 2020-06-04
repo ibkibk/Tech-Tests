@@ -518,14 +518,18 @@ const reverseString = (str) => {
 };
 console.log(reverseString("hello"));
 // ======================================================================================================
-// 16.How do you check if a string contains only digits?
+// 9-How do you check if two strings are anagrams of each other?
 
-const first = "buy";
-const checker = () => {
-  if ((first.length > 0) & (first.length < 2)) {
-    return true;
-  } else return false;
+const anagram = (word1, word2) => {
+  const newWord1 = word1.split("").sort().join("").toLowerCase();
+
+  const newWord2 = word2.split("").sort().join("").toLowerCase();
+
+  if (newWord1 === newWord2) {
+    return `${newWord1} and ${newWord2} are anagram`;
+  } else {
+    `${newWord1}and ${newWord2} arent anagram`;
+  }
 };
-checker();
 
-console.log(checker());
+console.log(anagram("raki", "kari"));
