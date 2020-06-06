@@ -532,4 +532,10 @@ const anagram = (word1, word2) => {
   }
 };
 
-console.log(anagram("raki", "kari"));
+console.log(anagram("boob", "bobo"));
+// ===========================================================================================
+// 7.How do you reverse the words in a sentence?
+const words = "ibragim kurhan ibrahim kurhan";
+const tek = words.split(" ").reverse();
+console.log(tek);
+// ===================================================================================================
