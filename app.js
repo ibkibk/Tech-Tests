@@ -539,3 +539,11 @@ const words = "ibragim kurhan ibrahim kurhan";
 const tek = words.split(" ").reverse();
 console.log(tek);
 // ===================================================================================================
+// 3.How do you find duplicate numbers in an array if it contains multiple duplicates?
+const numbers = ["5", "5", "4", "3", "2", "6", "7", "7", "2"];
+const newNumbers = numbers.filter(
+  (item, index) => numbers.indexOf(item) !== index
+);
+console.log(newNumbers);
+
+// =========================================================================================================
