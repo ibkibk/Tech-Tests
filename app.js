@@ -547,3 +547,13 @@ const newNumbers = numbers.filter(
 console.log(newNumbers);
 
 // =========================================================================================================
+
+// 2.How do you find the duplicate number on a given integer array?
+
+const numbers = ["5", "5", "4", "3", "2", "6", "7", "7", "2"];
+const newNumbers = numbers.filter(
+  (item, index) => numbers.indexOf(item) !== index
+);
+console.log(newNumbers);
+
+// ======================================================================================================
