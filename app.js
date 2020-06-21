@@ -557,3 +557,12 @@ const newNumbers = numbers.filter(
 console.log(newNumbers);
 
 // ======================================================================================================
+// 5.How do you find the largest and smallest number in an unsorted integer array?
+numbers = [2, 4, 9, 2, 0, 16, 24];
+
+const smallest = Math.min(...numbers);
+const largest = Math.max(...numbers);
+
+console.log(smallest);
+console.log(largest);
+// ===========================================================================================================
