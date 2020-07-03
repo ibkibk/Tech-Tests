@@ -355,7 +355,7 @@ console.log(capitalize("ibrahim kurhan"));
 
 // ======================================================================================================================
 
-// 6.How do you find all pairs of an integer array whose sum is equal to a given number?
+// 1.How do you find all pairs of an integer array whose sum is equal to a given number?
 
 const intArray = [2, 11, 8, 3, 9, 4, 5, 10, 29, 30, 52];
 const givenNumber = 13;
@@ -374,7 +374,7 @@ const lastResult = result.filter(
 console.log(lastResult);
 
 // ================================================================================================================================
-// 4.How do you remove duplicates from an array in place?
+// 2.How do you remove duplicates from an array in place?
 const numbers = ["a", "c", "d", "s", "s", "w", "w", "a"];
 const newNumbers = numbers.filter(
   (item, index) => numbers.indexOf(item) == index
@@ -404,7 +404,7 @@ const reset = () => {
 };
 
 // ========================================================================================================================
-// 15.How do you find all permutations of a string?
+// 3.How do you find all permutations of a string?
 const factorial = (n) => {
   return n != 1 ? n * factorial(n - 1) : 1;
 };
@@ -412,7 +412,7 @@ console.log(factorial(5));
 
 // ==========================================================================================================================
 
-// 10.How do you print the first non-repeated character from a string?
+// 4.How do you print the first non-repeated character from a string?
 
 const words = "ibrahibm";
 const last = words.split("");
@@ -437,7 +437,7 @@ console.log(final[0]);
 
 // ==================================================================================================================================
 
-//  8-How do you print duplicate characters from a string?
+//  5-How do you print duplicate characters from a string?
 
 const dublicatePrinter = () => {
   const sentence = "print the diblicate words from the sentence";
@@ -450,7 +450,7 @@ const dublicatePrinter = () => {
 console.log(dublicatePrinter());
 // =======================================================================================================================
 
-// 13.How do you check if two strings are a rotation of each other?
+// 6.How do you check if two strings are a rotation of each other?
 
 const checkRoation = (str1, str2) => {
   if (str1.length !== str2.length) {
@@ -464,7 +464,7 @@ console.log(checkRoation("ibrahim", "birahim"));
 
 // ==========================================================================================================================
 
-// 16.How do you check if a string contains only digits?
+// 7.How do you check if a string contains only digits?
 
 const first = "buy";
 const checker = () => {
@@ -478,7 +478,7 @@ console.log(checker());
 
 // =============================================================================================================================
 
-// 14.How do you swap two numbers without using a third variable?
+// 8.How do you swap two numbers without using a third variable?
 
 let a = 1;
 let b = 2;
@@ -494,7 +494,7 @@ let a = 2;
 let b = 1;
 // ==========================================================================================
 
-// 1.How do you find the missing numbers in a given integer array?
+// 9.How do you find the missing numbers in a given integer array?
 const numbers = [1, 2, 3, 4, 5, 6, 8, 9, 10];
 let number = [];
 
@@ -510,7 +510,7 @@ for (let i = 1; i < numbers.length; i++) {
 }
 console.log(number);
 // ===============================================================================================
-// 12.How can a given string be reversed using recursion?
+// 10.How can a given string be reversed using recursion?
 
 const reverseString = (str) => {
   if (str === "") return "";
@@ -518,7 +518,7 @@ const reverseString = (str) => {
 };
 console.log(reverseString("hello"));
 // ======================================================================================================
-// 9-How do you check if two strings are anagrams of each other?
+// 11-How do you check if two strings are anagrams of each other?
 
 const anagram = (word1, word2) => {
   const newWord1 = word1.split("").sort().join("").toLowerCase();
@@ -534,12 +534,12 @@ const anagram = (word1, word2) => {
 
 console.log(anagram("boob", "bobo"));
 // ===========================================================================================
-// 7.How do you reverse the words in a sentence?
+// 12.How do you reverse the words in a sentence?
 const words = "ibragim kurhan ibrahim kurhan";
 const tek = words.split(" ").reverse();
 console.log(tek);
 // ===================================================================================================
-// 3.How do you find duplicate numbers in an array if it contains multiple duplicates?
+// 13.How do you find duplicate numbers in an array if it contains multiple duplicates?
 const numbers = ["5", "5", "4", "3", "2", "6", "7", "7", "2"];
 const newNumbers = numbers.filter(
   (item, index) => numbers.indexOf(item) !== index
@@ -548,7 +548,7 @@ console.log(newNumbers);
 
 // =========================================================================================================
 
-// 2.How do you find the duplicate number on a given integer array?
+// 14.How do you find the duplicate number on a given integer array?
 
 const numbers = ["5", "5", "4", "3", "2", "6", "7", "7", "2"];
 const newNumbers = numbers.filter(
@@ -557,7 +557,7 @@ const newNumbers = numbers.filter(
 console.log(newNumbers);
 
 // ======================================================================================================
-// 5.How do you find the largest and smallest number in an unsorted integer array?
+// 15.How do you find the largest and smallest number in an unsorted integer array?
 numbers = [2, 4, 9, 2, 0, 16, 24];
 
 const smallest = Math.min(...numbers);
