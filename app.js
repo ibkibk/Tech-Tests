@@ -580,3 +580,19 @@ const findIntersection = (strArr) => {
   return matchArr;
 };
 console.log(findIntersection(["2,3,6", "5,6,7"]));
+
+// =============================================================================
+// 12.check numbers
+
+const checkNumbers = (num1, num2) => {
+  if (num1 > num2) {
+    return true;
+  } else if (num1 < num2) {
+    return false;
+  } else if (num1 == num2) {
+    return -1;
+  }
+};
+console.log(checkNumbers(21, 22));
+
+// ====================================================================================
