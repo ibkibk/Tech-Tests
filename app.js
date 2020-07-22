@@ -566,3 +566,17 @@ const largest = Math.max(...numbers);
 console.log(smallest);
 console.log(largest);
 // ===========================================================================================================
+// 13.find intersection
+
+const findIntersection = (strArr) => {
+  const new1 = strArr[0].split(",");
+  const new2 = strArr[1].split(",");
+  let matchArr = [];
+  new1.forEach((element) => {
+    if (new2.includes(element)) {
+      matchArr.push(element);
+    }
+  });
+  return matchArr;
+};
+console.log(findIntersection(["2,3,6", "5,6,7"]));
