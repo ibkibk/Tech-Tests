@@ -596,3 +596,9 @@ const checkNumbers = (num1, num2) => {
 console.log(checkNumbers(21, 22));
 
 // ====================================================================================
+// 11.word count
+const wordCount = (str) => {
+  const newStr = str.split(" ").length;
+  return newStr;
+};
+console.log(wordCount("ibrahim kurhan 38 22"));
