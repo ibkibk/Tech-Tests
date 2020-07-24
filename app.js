@@ -602,3 +602,12 @@ const wordCount = (str) => {
   return newStr;
 };
 console.log(wordCount("ibrahim kurhan 38 22"));
+// ==========================================================================================
+// 9.time converter
+
+const timeConverter = (num) => {
+  let hours = Math.floor(num / 60);
+  let minutes = num % 60;
+  // let time = hours + ":" + minutes;
+  return `saat ${hours} : ${minutes}`;
+};
