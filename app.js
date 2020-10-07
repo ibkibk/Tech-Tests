@@ -766,3 +766,32 @@ const mapToMorseCode = () => {
   document.getElementById("result").innerHTML = resulted;
 };
 document.getElementById("convert").addEventListener("click", mapToMorseCode);
+// ======================================================================================
+// RAINBOW DROPS================================================================================================
+// Convert a number to a string, the contents of which depend on the number's factors.
+// If the number has 3 as a factor, output 'Pling'.
+// If the number has 5 as a factor, output 'Plang'.
+// If the number has 7 as a factor, output 'Plong'.
+// If the number does not have 3, 5, or 7 as a factor, just pass the number's digits straight through.
+// Examples
+// 28's factors are 1, 2, 4, 7, 14, 28.
+// In raindrop-speak, this would be a simple "Plong".
+// 30's factors are 1, 2, 3, 5, 6, 10, 15, 30.
+// In raindrop-speak, this would be a "PlingPlang".
+// 34 has four factors:  21,, 17, and 34.
+// In raindrop-speak, this would be "34".
+
+const numbera = (number) => {
+  if (number % 3 == 0 && number % 5 !== 0) {
+    return "Pling";
+  } else if (number % 3 == 0 && number % 5 == 0) {
+    return "PlingPlang";
+  } else if (number % 5 == 0 && number % 3 !== 0) {
+    return "Plang";
+  } else if (number % 7 == 0) {
+    return "Plong";
+  } else number % 3 !== 0 && number % 5 !== 0 && number % 7 !== 0;
+  return number;
+};
+console.log(numbera(65));
+// ==========================================================================================================
