@@ -823,3 +823,14 @@ const numbera = (number) => {
 };
 console.log(numbera(65));
 // ==========================================================================================================
+// 7.How do you check if a string contains only digits?
+
+const first = "buy";
+const checker = () => {
+  if ((first.length > 0) & (first.length < 2)) {
+    return true;
+  } else return false;
+};
+checker();
+
+console.log(checker());
