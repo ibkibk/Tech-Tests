@@ -834,3 +834,17 @@ const checker = () => {
 checker();
 
 console.log(checker());
+
+// Reverse every other word in the string
+
+const reverse = (str) => {
+  const newStr = str.split(" ");
+  for (let i = 0; i < newStr.length; i++) {
+    if (i % 2 != 0) {
+      newStr[i] = newStr[i].split("").reverse().join("");
+    }
+  }
+  return newStr.join(" ");
+};
+
+console.log(reverse("ibrahim kurhan baba kadir aba"));
