@@ -868,3 +868,20 @@ const rot13 = (message) => {
   }
   return splitedMessage.join("");
 };
+// ================================================
+// RGB To Hex Conversion
+const rgbToHex = (r, g, b) => {
+  const deximall = (x) => {
+    if (x < 0) {
+      return "00";
+    } else if (x > 255) {
+      return "FF";
+    } else {
+      return x.toString(16).padStart(2, 0).toUpperCase();
+    }
+  };
+
+  return "#" + deximall(r) + deximall(g) + deximall(b);
+};
+
+console.log(rgbToHex(12, 221, 32));
