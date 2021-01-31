@@ -848,3 +848,23 @@ const reverse = (str) => {
 };
 
 console.log(reverse("ibrahim kurhan baba kadir aba"));
+//  ===========================================
+//rot13
+const rot13 = (message) => {
+  const alph = "abcdefghijklmnopqrstuvwxyz".split("");
+  const splitedMessage = message.split("");
+  for (i = 0; i < splitedMessage.length; i++) {
+    let m = alph.indexOf(splitedMessage[i].toLowerCase());
+    if (m >= 0) {
+      if (m + 13 > 25) {
+        m = m - 26;
+      }
+      if (splitedMessage[i] === splitedMessage[i].toUpperCase()) {
+        splitedMessage[i] = alph[m + 13].toUpperCase();
+      } else {
+        splitedMessage[i] = alph[m + 13];
+      }
+    }
+  }
+  return splitedMessage.join("");
+};
