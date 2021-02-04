@@ -885,3 +885,22 @@ const rgbToHex = (r, g, b) => {
 };
 
 console.log(rgbToHex(12, 221, 32));
+
+// Hex To RGB   Conversion
+
+const hexToRgb = (x) => {
+  const a = x.slice(0, 2);
+  const b = x.slice(2, 4);
+  const c = x.slice(4);
+  return (
+    "RBG(" +
+    parseInt(a, 16) +
+    "," +
+    parseInt(b, 16) +
+    "," +
+    parseInt(c, 16) +
+    ")"
+  );
+};
+console.log(hexToRgb("342211"));
+// ================================================
