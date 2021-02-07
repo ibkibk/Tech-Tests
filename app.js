@@ -904,3 +904,23 @@ const hexToRgb = (x) => {
 };
 console.log(hexToRgb("342211"));
 // ================================================
+// Human Readable Time
+const humanReadable = (number) => {
+  const hours = Math.floor(number / 3600);
+  const minutes = Math.floor((number % 3600) / 60);
+  const seconds = number % 60;
+
+  return `time ${padd(hours)} : ${padd(minutes)} : ${padd(seconds)}`;
+};
+
+const padd = (number) => {
+  if (number < 10) {
+    return "0" + number;
+  } else {
+    return number;
+  }
+};
+
+console.log(humanReadable(12345));
+
+// =============================================================================
