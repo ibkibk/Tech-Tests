@@ -924,3 +924,27 @@ const padd = (number) => {
 console.log(humanReadable(12345));
 
 // =============================================================================
+const zerosMoves = (arr) => {
+  const zeros = arr.filter((item) => item === 0);
+  const notZeros = arr.filter((item) => item !== 0);
+
+  return notZeros.concat(zeros);
+};
+
+console.log(zerosMoves(["a", 0, 0, 3, false, 2]));
+
+const zerosMoves = (arr) => {
+  const zeros = [];
+  const notZeros = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) {
+      zeros.push(arr[i]);
+    } else if (arr[i] !== 0) {
+      notZeros.push(arr[i]);
+    }
+  }
+  return notZeros.concat(zeros);
+};
+
+console.log(zerosMoves(["a", 0, 0, 3, false, 2]));
+// =========================================================================================
